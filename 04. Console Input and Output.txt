@@ -1,0 +1,318 @@
+01. Sum of 3 numbers------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = double.Parse(Console.ReadLine());
+        double sum = a + b + c;
+        Console.WriteLine(sum);
+    }    
+}
+
+02. Company Info---------------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string CompanyName = Console.ReadLine();
+        string CompanyAddress = Console.ReadLine();
+        string PhoneNumber = Console.ReadLine();
+        string FaxNumber = Console.ReadLine();
+        string WebSite = Console.ReadLine();
+        string ManagerFirstName = Console.ReadLine();
+        string ManagerLastName = Console.ReadLine();
+        string ManagerAge = Console.ReadLine();
+        string ManagerPhone = Console.ReadLine();
+
+        Console.WriteLine(CompanyName);
+        Console.WriteLine("Address: " + CompanyAddress);
+        Console.WriteLine("Tel. " + PhoneNumber);
+        if (FaxNumber == string.Empty)
+        {
+            Console.WriteLine("Fax: (no fax)");
+        }
+
+        else
+        {
+            Console.WriteLine("Fax: " + FaxNumber);
+        }
+        Console.WriteLine("Web site: " + WebSite);
+        Console.WriteLine("Manager: {0} {1} (age: {2}, tel. {3})", ManagerFirstName, ManagerLastName, ManagerAge, ManagerPhone);
+    }
+}
+
+03. Circle-----------------------------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double r = double.Parse(Console.ReadLine());
+        double perimeter;
+        double area;
+
+        if (r > 0)
+        {
+            area = Math.PI * (r * r);
+            perimeter = 2 * (Math.PI * r);
+
+            Console.Write("{0:F2} ", perimeter);
+            Console.WriteLine("{0:F2}", area);
+        }
+
+        else { }
+    }    
+}
+
+05. Numbers Comparer----------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c;
+
+        if (a >= b)
+        {
+            c = a;
+        }
+
+        else
+        {
+            c = b;
+        }
+
+        Console.WriteLine(c);
+    }    
+}
+
+06. Quadratic Equation-------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+       
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = double.Parse(Console.ReadLine());
+
+        double d;
+
+        d = (b * b) - (4 * (a * c));
+
+        double result1;
+        result1 = ((-b) + (Math.Sqrt(d))) / (2 * a);
+        double result2;
+        result2 = ((-b) - (Math.Sqrt(d))) / (2 * a);
+
+
+
+        if (d < 0)
+        {
+            string noRealRoots = "no real roots";
+            Console.WriteLine(noRealRoots);
+        }
+
+        else if (d == 0)
+        {
+            Console.WriteLine("{0:F2}", result1);
+
+        }
+
+        else if (d > 0)
+        {
+            
+            if (result1 < result2)
+            {
+                Console.WriteLine("{0:F2}", result1);
+                Console.WriteLine("{0:F2}", result2);
+            }
+
+            else
+            {
+                Console.WriteLine("{0:F2}", result2);
+                Console.WriteLine("{0:F2}", result1);
+            }
+        }  
+    }    
+}
+
+07. Sum of 5 numbers---------------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = double.Parse(Console.ReadLine());
+        double d = double.Parse(Console.ReadLine());
+        double e = double.Parse(Console.ReadLine());
+        double sum = a + b + c + d + e;
+        Console.WriteLine(sum);
+    }
+}
+
+08. Numbers from 1 to N----------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double n = double.Parse(Console.ReadLine());
+        if (n >= 1 && n < 1000)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        else { }
+    }
+}
+
+09. Sum of N Numbers---------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double n = double.Parse(Console.ReadLine());
+        double sum = 0;
+        if (n >= 1 && n <= 200)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                 double a = double.Parse(Console.ReadLine());
+
+                if (a >= -1000 && a <= 1000)
+                {
+                    sum += a;
+                }
+
+            }
+
+            Console.WriteLine(sum);
+        }
+
+        else { }
+    }
+}
+
+10. Fibonacci Numbers-------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double n = int.Parse(Console.ReadLine());
+
+        if (n >= 1 && n <= 50)
+        {
+            double a = 0;
+            double b = 1;
+            double c = 0;
+
+            if (n == 1)
+            {
+                Console.Write("{0}", a);
+                
+            }
+
+            else if (n == 2)
+            {
+                Console.Write("{0}, ", a);
+                Console.Write("{0}", b);
+            }
+
+            else if (n > 2)
+            {
+                Console.Write("{0}, ", a);
+                Console.Write("{0}, ", b);
+
+                for (int i = 1; i <= n - 2; i++)
+                {
+                    if (i == n - 2)
+                    {
+                        c = a + b;
+                        a = b;
+                        b = c;
+                        Console.Write("{0}", c);
+                    }
+
+                    else
+                    {
+                        c = a + b;
+                        a = b;
+                        b = c;
+                        Console.Write("{0}, ", c);
+                    }
+                }
+            }
+        }  
+    }
+}
+
+11. Interval------------------------------------------------
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        int nbigger = n + 1;
+        int m = int.Parse(Console.ReadLine());
+
+        if (n >= 0 && n <= m && m <= 2000)
+        {
+            int a = 0;
+            int count = 0;
+
+            for (int i = nbigger; i < m; i++)
+            {
+                a = i;
+                a %= 5;
+
+                if (a == 0)
+                {
+                    count++;
+                }
+
+                else
+                {
+                    continue;
+                }
+            }
+            Console.WriteLine(count);
+        }
+        else { }
+    }
+}

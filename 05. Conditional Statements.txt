@@ -1,0 +1,371 @@
+01. Exchange If Greater--------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = 0;
+
+        if (a < -100 || a > 100 || b < -100 || b > 100)
+        { }
+
+        else
+        {
+            if (a <= b)
+            {
+                Console.WriteLine(a + " " + b);
+            }
+
+            else
+            {
+                Console.WriteLine(b + " " + a);
+            }
+        }
+    }
+}
+  
+
+02. Bonus Score-----------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        double a = double.Parse(Console.ReadLine());
+        if (a < 1 || a > 9)
+        {
+            Console.WriteLine("invalid score");
+        }
+
+        else
+        {
+
+            if (a >= 1 && a <= 3)
+            {
+                Console.WriteLine(a * 10);
+            }
+
+            else if (a >= 4 && a <= 6)
+            {
+                Console.WriteLine(a * 100);
+            }
+
+            else if (a >= 7 && a <= 9)
+            {
+                Console.WriteLine(a * 1000);
+            }
+        }
+
+    }
+}
+
+03. Play Card--------------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        string card = Console.ReadLine();
+        if (card == "2" || card == "3" || card == "4" || card == "5" || card == "6" || card == "7" || card == "8" || card == "9" || card == "10" || card == "J" || card == "Q" || card == "K" || card == "A")
+        {
+            Console.WriteLine("yes " + card);
+        }
+
+        else
+        {
+            Console.WriteLine("no " + card);
+        }
+    }
+}
+
+04. Multiplication Sign--------------------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = double.Parse(Console.ReadLine());
+
+        if(a < 0 ^ b < 0 ^ c < 0 || a < 0 && b < 0 && c < 0)
+        {
+            Console.WriteLine("-");
+        }
+
+        else if (a == 0 || b == 0 || c == 0)
+        {
+            Console.WriteLine("0");
+        }
+
+        else if (a < 0 && b < 0 || a < 0 && c < 0 || c < 0 && b < 0 || a > 0 && b > 0 && c > 0)
+        {
+            Console.WriteLine("+");
+        }
+       
+    }
+}
+
+05. Biggest of 3-------------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = double.Parse(Console.ReadLine());
+        if (a < -200 || a > 200 || b < -200 || b > 200 || c < -200 || c > 200)
+        { }
+
+        else
+        {
+            if (a <= b)
+            {
+                a = b;
+                if (a <= c)
+                {
+                    a = c;
+                }
+            }
+
+            else if (a <= c)
+            {
+                a = c;
+            }
+            Console.WriteLine(a);
+        }
+       
+    }
+}
+
+06. Biggest of 5-----------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double c = double.Parse(Console.ReadLine());
+        double d = double.Parse(Console.ReadLine());
+        double e = double.Parse(Console.ReadLine());
+        if (a < -200 || a > 200 || b < -200 || b > 200 || c < -200 || c > 200 || d < -200 || d > 200 || e < -200 || e > 200)
+        { }
+
+        else
+        {
+            if (a <= b)
+            {
+                a = b;
+            }
+
+            if (a <= c)
+            {
+                a = c;
+            }
+
+            if (a <= d)
+            {
+                a = d;
+            }
+
+            if (a <= e)
+            {
+                a = e;
+            }
+
+            Console.WriteLine(a);
+        }
+
+    }
+}
+
+07. Sort 3 Numbers--------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+        int c = int.Parse(Console.ReadLine());
+
+
+        if (a >= -1000 && a <= 1000 && b >= -1000 && b <= 1000 && c >= -1000 && c <= 1000)
+        {
+            if (a <= b)
+            {
+                a = a ^ b;
+                b = a ^ b;
+                a = a ^ b;
+
+                if (b <= c)
+                {
+                    b = b ^ c;
+                    c = b ^ c;
+                    b = b ^ c;
+
+                    if (a <= b)
+                    {
+                        a = a ^ b;
+                        b = a ^ b;
+                        a = a ^ b;
+                    }
+                }
+            }
+
+            else
+            {
+                if (b <= c)
+                {
+                    b = b ^ c;
+                    c = b ^ c;
+                    b = b ^ c;
+
+                    if (a <= b)
+                    {
+                        a = a ^ b;
+                        b = a ^ b;
+                        a = a ^ b;
+                    }
+                }
+            }
+            Console.WriteLine("{0} {1} {2}", a, b, c);
+        }
+        else { }
+    }
+}
+
+08. Digit as Word------------------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        string a = Console.ReadLine();
+        if (a == string.Empty)
+        { }
+
+        else
+        {
+            switch (a)
+            {
+                case "0":
+                    Console.WriteLine("zero");
+                    break;
+                case "1":
+                    Console.WriteLine("one");
+                    break;
+                case "2":
+                    Console.WriteLine("two");
+                    break;
+                case "3":
+                    Console.WriteLine("three");
+                    break;
+                case "4":
+                    Console.WriteLine("four");
+                    break;
+                case "5":
+                    Console.WriteLine("five");
+                    break;
+                case "6":
+                    Console.WriteLine("six");
+                    break;
+                case "7":
+                    Console.WriteLine("seven");
+                    break;
+                case "8":
+                    Console.WriteLine("eight");
+                    break;
+                case "9":
+                    Console.WriteLine("nine");
+                    break;
+                default:
+                    Console.WriteLine("not a digit");
+                    break;
+            }
+        }
+    }
+}
+
+09. Int, Double and String-------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        string a = Console.ReadLine();
+        if (a == string.Empty)
+        { }
+
+        else
+        {
+            if (a == "integer")
+            {
+                int value = int.Parse(Console.ReadLine());
+                if (value < -1000 || value > 1000)
+                { }
+                else
+                {
+                    Console.WriteLine(value + 1);
+                }
+            }
+
+            else if (a == "real")
+            {
+                double value2 = double.Parse(Console.ReadLine());
+                if (value2 < -1000 || value2 > 1000)
+                { }
+                else
+                {
+                    Console.WriteLine("{0:F2}", value2 + 1);
+                }
+            }
+
+            else if (a == "text")
+            {
+                string text = Console.ReadLine();
+                Console.WriteLine(text + "*");
+            }
+        } 
+    }
+}

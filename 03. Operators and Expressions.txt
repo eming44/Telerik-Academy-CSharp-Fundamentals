@@ -1,0 +1,332 @@
+01. Odd or Even------------------------------------------------
+
+using System;
+    class MainClass
+    {
+        public static void Main()
+        {
+            int number = int.Parse(Console.ReadLine());
+            int result = number % 2;
+            
+            if (result == 0)
+            {
+                Console.WriteLine("even " + number);
+            }
+
+            else
+            {
+                Console.WriteLine("odd " + number);
+            }
+
+        }
+    }
+
+02. Moon gravity------------------------------------------------
+
+using System;
+
+namespace training
+{
+    class Program
+    {
+        static void Main()
+        {
+            double a = double.Parse(Console.ReadLine());
+            if (a < 0 || a > 1000)
+            {
+
+            }
+
+            else 
+            {
+                double result = (17f / 100f) * a;
+                Console.WriteLine("{0:F3}", result);
+            }
+
+        }
+    }
+}
+
+03. Divide by 7 and 5------------------------------------------
+
+using System;
+
+namespace training
+{
+    class Program
+    {
+        static void Main()
+        {
+            double a = double.Parse(Console.ReadLine());
+
+                double result1 = a % 7;
+                double result2 = a % 5;
+                if (result1 == 0 && result2 == 0)
+                {
+                    Console.WriteLine("true " + a);
+                }
+
+                else
+                {
+                    Console.WriteLine("false " + a);
+                }
+        }
+    }
+}
+
+04. Rectangles---------------------------------------------
+
+using System;
+
+namespace training
+{
+    class Program
+    {
+        static void Main()
+        {
+            double width = double.Parse(Console.ReadLine());
+            double height = double.Parse(Console.ReadLine());
+
+            double area = width * height;
+            double perimeter = (width + height) * 2;
+
+            Console.Write("{0:F2} ", area);
+            Console.WriteLine("{0:F2}", perimeter);
+        }
+    }
+}
+
+05. Third Digit----------------------------------------------
+
+using System;
+
+namespace training
+{
+    class Program
+    {
+        static void Main()
+        {
+            uint a = uint.Parse(Console.ReadLine());
+            uint result;
+            result = a / 100;
+            result %= 10;
+  
+            if (result == 7)
+            {
+                Console.WriteLine("true");
+            }
+            else 
+            {
+                Console.WriteLine("false " + result);
+            }
+        }
+    }
+}
+
+06. Four digits---------------------------------------------
+
+    using System;
+
+    namespace training
+    {
+        class Program
+        {
+            static void Main()
+            {
+                
+                uint a = uint.Parse(Console.ReadLine());
+                if (a < 1 || a > 9999)
+                { }
+
+                else
+                {
+                    uint firstDigit = a % 10;
+                    //Console.WriteLine(firstDigit);     4
+                    uint secondDigit = a / 10;
+                    uint sdResult = secondDigit % 10;
+                    //Console.WriteLine(sdResult);        3
+                    uint thirdDigit = a / 100;
+                    uint tdResult = thirdDigit % 10;
+                    //Console.WriteLine(tdResult);      2
+                    uint fourthDigit;
+                    fourthDigit = a / 1000;
+                    uint fdResult = fourthDigit % 10;
+                    //Console.WriteLine(fdResult);    1
+
+                    Console.WriteLine(firstDigit + sdResult + tdResult + fdResult);
+                    Console.WriteLine("{0}{1}{2}{3}", firstDigit, sdResult, tdResult, fdResult);
+                    Console.WriteLine("{0}{1}{2}{3}", firstDigit, fdResult, tdResult, sdResult);
+                    Console.WriteLine("{0}{1}{2}{3}", fdResult, sdResult, tdResult, firstDigit);
+                }
+            }
+        }
+    }
+
+07. Point in a circle------------------------------------------------------
+
+    using System;
+
+    
+        class Program
+        {
+            static void Main()
+            {      
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
+                if (x > 1000 || x < -1000 || y > 1000 || y < -1000)
+                { }
+
+                else
+                {
+                    double result = Math.Sqrt((x * x) + (y * y));
+
+                    if (x <= 2 && x >= -2 && y <= 2 && y >= -2)
+                    {
+                        Console.WriteLine("yes {0:F2}", result);
+                    }
+                    else
+                    {
+                        Console.WriteLine("no {0:F2}", result);
+                    }
+                } 
+            }
+        }
+
+08. Prime check--------------------------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+        
+        int a = int.Parse(Console.ReadLine());
+
+        if (a <= 1 || a > 100)
+        {
+            Console.WriteLine("false");
+        }
+
+        else if (a > 1 && a <= 100)
+        {
+            if (a == 2 || a == 3 || a == 5 || a == 7)
+            {
+                Console.WriteLine("true");
+            }
+
+            else if (a % 2 == 0 || a % 3 == 0 || a % 5 == 0 || a % 7 == 0)
+            {
+                Console.WriteLine("false");
+            }
+
+            else
+            {
+                Console.WriteLine("true");
+            }
+        }
+    }
+}
+
+09. Trapezoids---------------------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+        
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double h = double.Parse(Console.ReadLine());
+        if (a < -500 || a > 500 || b < -500 || b > 500 || h < -500 || h > 500)
+        { }
+
+        else
+        {
+            h /= 2;
+            double area = (a + b) * h;
+            Console.WriteLine("{0:F7}", area);
+        }
+        
+    }
+}
+
+10. Point, Circle, Rectangle-----------------------------------------------------
+
+using System;
+class BookExperience
+{
+    static void Main()
+    {
+        double x = double.Parse(Console.ReadLine());
+        double y = double.Parse(Console.ReadLine());
+        if ((x - 1) * (x - 1) + (y - 1) * (y - 1) <= 1.5 * 1.5)
+        {
+            Console.Write("inside circle");
+        }
+        else
+        {
+            Console.Write("outside circle");
+        }
+        if ((x >= -1 && x <= 5) && (y <= 1 && y >= -1))
+        {
+            Console.WriteLine(" inside rectangle");
+        }
+        else
+        {
+            Console.WriteLine(" outside rectangle");
+        }
+    }
+}
+
+11. 3rd Bit--------------------------------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+
+        uint a = uint.Parse(Console.ReadLine());
+        
+        uint mask = 1 << 3 ;
+
+        uint result = a & mask;
+
+        if (result == 0)
+        {
+            Console.WriteLine("0");
+        }
+
+        else
+        {
+            Console.WriteLine("1");
+        }
+    }
+}
+
+12. N-th Bit----------------------------------------------------
+
+using System;
+
+
+class Program
+{
+    static void Main()
+    {
+       
+        long p = long.Parse(Console.ReadLine());
+
+        int n = int.Parse(Console.ReadLine());
+
+        long result = (long)((p >> n) & 1);
+
+        Console.WriteLine(result);
+    }
+}
